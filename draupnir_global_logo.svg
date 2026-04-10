@@ -1,0 +1,55 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-soft">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Infinity / Figure-8 (Draupnir ring) -->
+  <path d="M 200 100
+           C 200 60, 260 40, 300 40
+           C 340 40, 380 65, 380 100
+           C 380 135, 340 160, 300 160
+           C 260 160, 200 140, 200 100
+           C 200 60, 140 40, 100 40
+           C 60 40, 20 65, 20 100
+           C 20 135, 60 160, 100 160
+           C 140 160, 200 140, 200 100 Z"
+        fill="none" stroke="#C5A55A" stroke-width="2.5" filter="url(#glow)"/>
+
+  <!-- All-seeing Eye of Odin at center -->
+  <!-- Eye almond shape -->
+  <path d="M 170 100 Q 185 78, 200 78 Q 215 78, 230 100 Q 215 122, 200 122 Q 185 122, 170 100 Z"
+        fill="none" stroke="#C5A55A" stroke-width="1.8" filter="url(#glow-soft)"/>
+
+  <!-- Iris circle -->
+  <circle cx="200" cy="100" r="11" fill="none" stroke="#C5A55A" stroke-width="1.5" filter="url(#glow-soft)"/>
+
+  <!-- Pupil -->
+  <circle cx="200" cy="100" r="5" fill="#C5A55A" filter="url(#glow-soft)"/>
+
+  <!-- Inner iris detail -->
+  <circle cx="200" cy="100" r="8" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Light reflection in pupil -->
+  <circle cx="202" cy="98" r="1.5" fill="#F5F0E8" opacity="0.6"/>
+
+  <!-- Subtle rays from eye (wisdom emanating) -->
+  <line x1="200" y1="72" x2="200" y2="76" stroke="#C5A55A" stroke-width="1" opacity="0.4" filter="url(#glow-soft)"/>
+  <line x1="200" y1="124" x2="200" y2="128" stroke="#C5A55A" stroke-width="1" opacity="0.4" filter="url(#glow-soft)"/>
+
+  <!-- Subtle diamond accents at infinity extremes -->
+  <polygon points="20,100 24,96 28,100 24,104" fill="#C5A55A" opacity="0.3"/>
+  <polygon points="372,100 376,96 380,100 376,104" fill="#C5A55A" opacity="0.3"/>
+</svg>

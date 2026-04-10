@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draupnir Global AG — Strategic Holding Company, Zug, Switzerland</title>
+<meta name="description" content="Draupnir Global AG is a Swiss holding company headquartered in Zug. Strategic investments across precious metals, advisory, and technology. Forged in wisdom. Multiplied by design.">
+<meta property="og:title" content="Draupnir Global AG — Strategic Holding, Zug">
+<meta property="og:description" content="Swiss holding company. Precious metals, strategic advisory, technology. Forged in wisdom. Multiplied by design.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://draupnirglobal.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%23C5A55A' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23C5A55A'/%3E%3C/svg%3E">
+<style>
+  /* ── Reset ── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ── Variables ── */
+  :root {
+    --black: #0A0A0A;
+    --black-light: #111111;
+    --gold: #C5A55A;
+    --gold-dim: rgba(197, 165, 90, 0.15);
+    --gold-hover: #D4B76A;
+    --cream: #F5F0E8;
+    --grey: #888888;
+    --grey-dark: #555555;
+    --grey-border: #1A1A1A;
+    --font-serif: Georgia, 'Times New Roman', serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --max-width: 1100px;
+    --section-padding: 120px 0;
+  }
+
+  /* ── Base ── */
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* ── Navigation ── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--grey-border);
+  }
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+  .nav-logo svg { width: 36px; height: 18px; }
+  .nav-logo span {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 400;
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--grey);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-sans);
+    transition: color 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--cream); }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 160px 40px 120px;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    opacity: 0.3;
+  }
+  .hero-logo { margin-bottom: 48px; opacity: 0.85; }
+  .hero-logo svg { width: 280px; height: 140px; }
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 12px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .hero .tagline {
+    font-size: 18px;
+    color: var(--grey);
+    letter-spacing: 3px;
+    font-style: italic;
+    margin-bottom: 32px;
+  }
+  .hero .subtitle {
+    font-size: 15px;
+    color: var(--grey-dark);
+    letter-spacing: 2px;
+    font-family: var(--font-sans);
+  }
+
+  /* ── Section base ── */
+  section {
+    padding: var(--section-padding);
+    border-top: 1px solid var(--grey-border);
+  }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-family: var(--font-sans);
+  }
+  section h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+  }
+  section p {
+    color: var(--grey);
+    max-width: 680px;
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+
+  /* ── About ── */
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* ── Companies ── */
+  .companies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+  }
+  .company-card {
+    background: var(--black-light);
+    border: 1px solid var(--grey-border);
+    border-radius: 4px;
+    padding: 48px 40px;
+    transition: border-color 0.3s ease;
+  }
+  .company-card:hover { border-color: rgba(197, 165, 90, 0.25); }
+  .company-card .card-logo {
+    margin-bottom: 28px;
+    opacity: 0.8;
+  }
+  .company-card h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .company-card .card-type {
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: var(--font-sans);
+    margin-bottom: 20px;
+  }
+  .company-card p {
+    font-size: 15px;
+    color: var(--grey);
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  /* ── Philosophy ── */
+  .philosophy-content {
+    max-width: 720px;
+  }
+  .philosophy-content blockquote {
+    border-left: 2px solid var(--gold);
+    padding-left: 28px;
+    margin: 40px 0;
+    font-style: italic;
+    color: var(--cream);
+    font-size: 20px;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  /* ── Contact ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .contact-info h3 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+  .contact-info p {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+  .contact-info a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .contact-info a:hover { color: var(--gold-hover); }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--grey-border);
+    padding: 40px 0;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer p {
+    font-size: 12px;
+    color: var(--grey-dark);
+    letter-spacing: 1px;
+    font-family: var(--font-sans);
+  }
+
+  /* ── Divider ── */
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+    margin: 32px 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .container { padding: 0 24px; }
+    .hero h1 { font-size: 28px; letter-spacing: 6px; }
+    .hero .tagline { font-size: 15px; }
+    .hero-logo svg { width: 200px; height: 100px; }
+    .about-content,
+    .companies-grid,
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .nav-links { gap: 20px; }
+    .nav-links a { font-size: 11px; }
+    section { padding: 80px 0; }
+    section h2 { font-size: 26px; }
+  }
+
+  @media (max-width: 480px) {
+    .nav-logo span { display: none; }
+    .nav-links { gap: 16px; }
+    .hero h1 { font-size: 22px; letter-spacing: 4px; }
+    .company-card { padding: 32px 24px; }
+  }
+
+  /* ── Animations ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  .fade-up.delay-1 { animation-delay: 0.15s; }
+  .fade-up.delay-2 { animation-delay: 0.3s; }
+  .fade-up.delay-3 { animation-delay: 0.45s; }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="nav-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <path d="M 200 100 C 200 60, 260 40, 300 40 C 340 40, 380 65, 380 100 C 380 135, 340 160, 300 160 C 260 160, 200 140, 200 100 C 200 60, 140 40, 100 40 C 60 40, 20 65, 20 100 C 20 135, 60 160, 100 160 C 140 160, 200 140, 200 100 Z" fill="none" stroke="#C5A55A" stroke-width="3" filter="url(#nav-glow)"/>
+        <path d="M 170 100 Q 185 78, 200 78 Q 215 78, 230 100 Q 215 122, 200 122 Q 185 122, 170 100 Z" fill="none" stroke="#C5A55A" stroke-width="2"/>
+        <circle cx="200" cy="100" r="11" fill="none" stroke="#C5A55A" stroke-width="1.5"/>
+        <circle cx="200" cy="100" r="5" fill="#C5A55A"/>
+      </svg>
+      <span>DRAUPNIR GLOBAL</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#companies">Companies</a></li>
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-logo fade-up">
+    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="glow-s"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <path d="M 200 100 C 200 60, 260 40, 300 40 C 340 40, 380 65, 380 100 C 380 135, 340 160, 300 160 C 260 160, 200 140, 200 100 C 200 60, 140 40, 100 40 C 60 40, 20 65, 20 100 C 20 135, 60 160, 100 160 C 140 160, 200 140, 200 100 Z" fill="none" stroke="#C5A55A" stroke-width="2.5" filter="url(#glow)"/>
+      <path d="M 170 100 Q 185 78, 200 78 Q 215 78, 230 100 Q 215 122, 200 122 Q 185 122, 170 100 Z" fill="none" stroke="#C5A55A" stroke-width="1.8" filter="url(#glow-s)"/>
+      <circle cx="200" cy="100" r="11" fill="none" stroke="#C5A55A" stroke-width="1.5" filter="url(#glow-s)"/>
+      <circle cx="200" cy="100" r="5" fill="#C5A55A" filter="url(#glow-s)"/>
+      <circle cx="200" cy="100" r="8" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="202" cy="98" r="1.5" fill="#F5F0E8" opacity="0.6"/>
+      <line x1="200" y1="72" x2="200" y2="76" stroke="#C5A55A" stroke-width="1" opacity="0.4" filter="url(#glow-s)"/>
+      <line x1="200" y1="124" x2="200" y2="128" stroke="#C5A55A" stroke-width="1" opacity="0.4" filter="url(#glow-s)"/>
+      <polygon points="20,100 24,96 28,100 24,104" fill="#C5A55A" opacity="0.3"/>
+      <polygon points="372,100 376,96 380,100 376,104" fill="#C5A55A" opacity="0.3"/>
+    </svg>
+  </div>
+  <h1 class="fade-up delay-1">Draupnir Global</h1>
+  <p class="tagline fade-up delay-2">Forged in wisdom. Multiplied by design.</p>
+  <p class="subtitle fade-up delay-3">Strategic holding company &mdash; Zug, Switzerland</p>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">About</div>
+    <div class="about-content">
+      <div>
+        <h2>Built for generations</h2>
+        <div class="divider"></div>
+        <p>Draupnir Global AG is a Swiss holding company headquartered in Zug. We build and steward a portfolio of operating companies across precious metals, strategic advisory, and digital assets &mdash; guided by patience, precision, and long-term vision.</p>
+      </div>
+      <div>
+        <p>Named after Draupnir, the golden ring of Odin that multiplied eightfold with every cycle, our structure is designed for compounding value across generations.</p>
+        <p>We bring together deep industry expertise with the strategic discipline of Swiss corporate governance, operating at the intersection of traditional commerce and emerging markets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Companies -->
+<section id="companies">
+  <div class="container">
+    <div class="section-label">Our Companies</div>
+    <h2>The Sindri portfolio</h2>
+    <p>Named after Sindri, the master dwarf-smith who forged Draupnir and Mjolnir in the fires of Svartalfheim. Each company is crafted with the same precision.</p>
+    <div class="companies-grid">
+      <div class="company-card">
+        <div class="card-logo">
+          <svg viewBox="0 0 200 250" width="60" height="75" xmlns="http://www.w3.org/2000/svg">
+            <defs><filter id="g1"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+            <path d="M 45 45 L 155 45 L 155 100 L 115 100 L 115 105 L 85 105 L 85 100 L 45 100 Z" fill="none" stroke="#C5A55A" stroke-width="2.5" stroke-linejoin="round" filter="url(#g1)"/>
+            <circle cx="100" cy="72" r="8" fill="none" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+            <circle cx="100" cy="72" r="3" fill="#C5A55A" opacity="0.4"/>
+            <rect x="91" y="105" width="18" height="95" rx="3" fill="none" stroke="#C5A55A" stroke-width="2" filter="url(#g1)"/>
+            <circle cx="100" cy="212" r="12" fill="none" stroke="#C5A55A" stroke-width="1.8" filter="url(#g1)"/>
+            <circle cx="100" cy="212" r="5" fill="#C5A55A" opacity="0.5" filter="url(#g1)"/>
+          </svg>
+        </div>
+        <h3>Sindri Draupnir GmbH</h3>
+        <div class="card-type">Operations &middot; Zug</div>
+        <p>Primary operating entity for strategic advisory, precious metals brokerage, and international trade. The forge where value is created.</p>
+      </div>
+      <div class="company-card">
+        <div class="card-logo">
+          <svg viewBox="0 0 200 200" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+            <defs><filter id="g2"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+            <path d="M 40 135 L 55 105 L 145 105 L 160 135 L 155 145 L 45 145 Z" fill="none" stroke="#C5A55A" stroke-width="2" stroke-linejoin="round" filter="url(#g2)"/>
+            <path d="M 80 105 L 75 75 Q 72 60, 80 55 L 90 55" fill="none" stroke="#C5A55A" stroke-width="2" stroke-linecap="round" filter="url(#g2)"/>
+            <circle cx="100" cy="70" r="5" fill="#C5A55A" filter="url(#g2)"/>
+            <circle cx="100" cy="35" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#g2)"/>
+            <circle cx="130" cy="52" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#g2)"/>
+            <circle cx="130" cy="88" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#g2)"/>
+            <circle cx="70" cy="88" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#g2)"/>
+            <circle cx="70" cy="52" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#g2)"/>
+            <line x1="100" y1="70" x2="100" y2="35" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+            <line x1="100" y1="70" x2="130" y2="52" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+            <line x1="100" y1="70" x2="130" y2="88" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+            <line x1="100" y1="70" x2="70" y2="88" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+            <line x1="100" y1="70" x2="70" y2="52" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+            <line x1="100" y1="35" x2="130" y2="52" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+            <line x1="130" y1="52" x2="130" y2="88" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+            <line x1="130" y1="88" x2="70" y2="88" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+            <line x1="70" y1="88" x2="70" y2="52" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+            <line x1="70" y1="52" x2="100" y2="35" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+          </svg>
+        </div>
+        <h3>Sindri Digital GmbH</h3>
+        <div class="card-type">Digital Assets &middot; Zug</div>
+        <p>Dedicated entity for cryptocurrency, blockchain advisory, and digital asset management. Separate banking and compliance infrastructure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Philosophy -->
+<section id="philosophy">
+  <div class="container">
+    <div class="section-label">Philosophy</div>
+    <div class="philosophy-content">
+      <h2>Forged, not assembled</h2>
+      <div class="divider"></div>
+      <p>We operate at the intersection of ancient wisdom and modern enterprise. Every decision is weighed against its long-term consequence. Every partnership is chosen for endurance, not expediency.</p>
+      <blockquote>Our companies are forged &mdash; not assembled. Built with the care of master craftsmen, designed to endure market cycles, and structured to multiply value with discipline and integrity.</blockquote>
+      <p>From the precious metals markets of Latin America to the digital asset infrastructure of Switzerland, we build bridges between traditional value and emerging opportunity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Draupnir Global AG</h3>
+        <p>Zug, Switzerland</p>
+        <p style="margin-top: 20px;"><a href="mailto:info@draupnirglobal.com">info@draupnirglobal.com</a></p>
+      </div>
+      <div class="contact-info">
+        <h3>Registered Office</h3>
+        <p>Centralis Group</p>
+        <p>Zug, Switzerland</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Draupnir Global AG</p>
+    <p>ZUG, SWITZERLAND</p>
+  </div>
+</footer>
+
+</body>
+</html>

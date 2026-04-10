@@ -1,0 +1,64 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Anvil silhouette with blockchain network overlay -->
+
+  <!-- Geometric anvil base -->
+  <path d="M 40 135 L 55 105 L 145 105 L 160 135 L 155 145 L 45 145 Z"
+        fill="none" stroke="#C5A55A" stroke-width="2" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- Anvil horn (upward) -->
+  <path d="M 80 105 L 75 75 Q 72 60, 80 55 L 90 55"
+        fill="none" stroke="#C5A55A" stroke-width="2" stroke-linecap="round" filter="url(#glow)"/>
+
+  <!-- Blockchain hexagonal network above anvil -->
+  <!-- 7 nodes in hexagonal arrangement -->
+
+  <!-- Center node (largest — the forge point) -->
+  <circle cx="100" cy="70" r="5" fill="#C5A55A" filter="url(#glow)"/>
+
+  <!-- Top -->
+  <circle cx="100" cy="35" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#glow)"/>
+  <!-- Top-right -->
+  <circle cx="130" cy="52" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#glow)"/>
+  <!-- Bottom-right -->
+  <circle cx="130" cy="88" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#glow)"/>
+  <!-- Bottom -->
+  <circle cx="100" cy="105" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#glow)"/>
+  <!-- Bottom-left -->
+  <circle cx="70" cy="88" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#glow)"/>
+  <!-- Top-left -->
+  <circle cx="70" cy="52" r="3.5" fill="#C5A55A" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- Inner connections (center to all) -->
+  <line x1="100" y1="70" x2="100" y2="35" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="70" x2="130" y2="52" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="70" x2="130" y2="88" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="70" x2="100" y2="105" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="70" x2="70" y2="88" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+  <line x1="100" y1="70" x2="70" y2="52" stroke="#C5A55A" stroke-width="1" opacity="0.5"/>
+
+  <!-- Outer hexagon connections -->
+  <line x1="100" y1="35" x2="130" y2="52" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="130" y1="52" x2="130" y2="88" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="130" y1="88" x2="100" y2="105" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="100" y1="105" x2="70" y2="88" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="70" y1="88" x2="70" y2="52" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="70" y1="52" x2="100" y2="35" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Spark/energy from forge point -->
+  <line x1="100" y1="25" x2="100" y2="20" stroke="#C5A55A" stroke-width="1" opacity="0.4"/>
+  <line x1="108" y1="28" x2="113" y2="23" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+  <line x1="92" y1="28" x2="87" y2="23" stroke="#C5A55A" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Anvil base detail -->
+  <line x1="60" y1="155" x2="140" y2="155" stroke="#C5A55A" stroke-width="1.5" opacity="0.3"/>
+</svg>
