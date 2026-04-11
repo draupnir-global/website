@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sindri Draupnir GmbH — Operations, Zug, Switzerland</title>
+<meta name="description" content="Sindri Draupnir GmbH is the operating arm of the Draupnir Global group. Precious metals, strategic advisory, and international trade. Zug, Switzerland.">
+<meta property="og:title" content="Sindri Draupnir GmbH — Operations, Zug">
+<meta property="og:description" content="Strategic advisory, precious metals brokerage, and international trade. Part of Draupnir Global.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sindridraupnir.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='8' y='6' width='16' height='12' rx='1' fill='none' stroke='%23C5A55A' stroke-width='2'/%3E%3Crect x='14' y='18' width='4' height='10' rx='1' fill='none' stroke='%23C5A55A' stroke-width='1.5'/%3E%3C/svg%3E">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #0A0A0A;
+    --black-light: #111111;
+    --gold: #C5A55A;
+    --gold-dim: rgba(197, 165, 90, 0.15);
+    --gold-hover: #D4B76A;
+    --cream: #F5F0E8;
+    --grey: #888888;
+    --grey-dark: #555555;
+    --grey-border: #1A1A1A;
+    --font-serif: Georgia, 'Times New Roman', serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --max-width: 1100px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--cream);
+    font-family: var(--font-serif);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
+
+  /* Nav */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--grey-border);
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .nav-logo span { color: var(--gold); font-size: 14px; letter-spacing: 4px; }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    color: var(--grey); text-decoration: none; font-size: 13px;
+    letter-spacing: 2px; text-transform: uppercase; font-family: var(--font-sans);
+    transition: color 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--cream); }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    padding: 160px 40px 120px; position: relative;
+  }
+  .hero::after {
+    content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 1px; height: 80px; background: linear-gradient(to bottom, var(--gold), transparent); opacity: 0.3;
+  }
+  .hero-logo { margin-bottom: 48px; opacity: 0.85; }
+  .hero h1 { font-size: 48px; font-weight: 400; letter-spacing: 12px; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
+  .hero .tagline { font-size: 18px; color: var(--grey); letter-spacing: 3px; font-style: italic; margin-bottom: 32px; }
+  .hero .subtitle { font-size: 15px; color: var(--grey-dark); letter-spacing: 2px; font-family: var(--font-sans); }
+
+  /* Sections */
+  section { padding: 120px 0; border-top: 1px solid var(--grey-border); }
+  .section-label { font-size: 11px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 40px; font-family: var(--font-sans); }
+  section h2 { font-size: 32px; font-weight: 400; color: var(--cream); margin-bottom: 28px; }
+  section p { color: var(--grey); max-width: 680px; margin-bottom: 20px; font-size: 17px; }
+  .divider { width: 40px; height: 1px; background: var(--gold); opacity: 0.4; margin: 32px 0; }
+
+  /* Services grid */
+  .services-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-top: 60px; }
+  .service-card {
+    background: var(--black-light); border: 1px solid var(--grey-border);
+    border-radius: 4px; padding: 48px 32px; transition: border-color 0.3s ease;
+  }
+  .service-card:hover { border-color: rgba(197, 165, 90, 0.25); }
+  .service-card h3 { font-size: 20px; font-weight: 400; color: var(--cream); margin-bottom: 8px; }
+  .service-card .card-type { font-size: 12px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-family: var(--font-sans); margin-bottom: 20px; }
+  .service-card p { font-size: 15px; color: var(--grey); line-height: 1.65; max-width: 100%; }
+
+  /* About grid */
+  .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+  .contact-info h3 { font-size: 18px; font-weight: 400; color: var(--cream); margin-bottom: 20px; }
+  .contact-info p { font-size: 15px; margin-bottom: 8px; }
+  .contact-info a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
+  .contact-info a:hover { color: var(--gold-hover); }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--grey-border); padding: 40px 0; }
+  footer .container { display: flex; justify-content: space-between; align-items: center; }
+  footer p { font-size: 12px; color: var(--grey-dark); letter-spacing: 1px; font-family: var(--font-sans); }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container { padding: 0 24px; }
+    .hero h1 { font-size: 28px; letter-spacing: 6px; }
+    .services-grid, .about-content, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    section { padding: 80px 0; }
+  }
+  @media (max-width: 480px) {
+    .nav-logo span { display: none; }
+    .hero h1 { font-size: 22px; letter-spacing: 4px; }
+  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .fade-up { animation: fadeUp 0.8s ease-out forwards; opacity: 0; }
+  .fade-up.delay-1 { animation-delay: 0.15s; }
+  .fade-up.delay-2 { animation-delay: 0.3s; }
+  .fade-up.delay-3 { animation-delay: 0.45s; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <svg viewBox="0 0 300 160" width="48" height="26" xmlns="http://www.w3.org/2000/svg">
+        <defs><filter id="ng"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <!-- Mjolnir mini -->
+        <rect x="100" y="15" width="100" height="40" rx="3" fill="none" stroke="#C5A55A" stroke-width="2.5" filter="url(#ng)"/>
+        <rect x="142" y="55" width="16" height="60" rx="2" fill="none" stroke="#C5A55A" stroke-width="2" filter="url(#ng)"/>
+        <!-- Eye -->
+        <path d="M130,35 Q150,20 170,35 Q150,50 130,35 Z" fill="none" stroke="#C5A55A" stroke-width="1.5"/>
+        <circle cx="150" cy="35" r="5" fill="#C5A55A" opacity="0.6"/>
+        <!-- Infinity hint -->
+        <path d="M110,35 C110,20 130,15 150,28 C170,15 190,20 190,35 C190,50 170,55 150,42 C130,55 110,50 110,35 Z" fill="none" stroke="#C5A55A" stroke-width="1" opacity="0.3"/>
+        <ellipse cx="150" cy="120" rx="10" ry="5" fill="none" stroke="#C5A55A" stroke-width="1.5"/>
+      </svg>
+      <span>SINDRI DRAUPNIR</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://draupnirglobal.com" style="color: var(--gold);">Draupnir Global</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-logo fade-up">
+    <svg viewBox="0 0 500 400" width="260" height="210" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gm" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#F5E6A3"/><stop offset="50%" style="stop-color:#C5A55A"/><stop offset="100%" style="stop-color:#8B6914"/></linearGradient>
+        <linearGradient id="gh" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#FFF8DC"/><stop offset="50%" style="stop-color:#D4AF37"/><stop offset="100%" style="stop-color:#8B6914"/></linearGradient>
+        <filter id="gl"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/></filter>
+      </defs>
+      <!-- Mjolnir -->
+      <g transform="translate(250, 170)" filter="url(#sh)">
+        <rect x="-80" y="-50" width="160" height="60" rx="4" fill="url(#gm)" stroke="url(#gh)" stroke-width="2"/>
+        <rect x="-78" y="-48" width="156" height="10" rx="2" fill="url(#gh)" opacity="0.5"/>
+        <rect x="-85" y="-44" width="10" height="50" rx="4" fill="url(#gh)"/>
+        <rect x="75" y="-44" width="10" height="50" rx="4" fill="url(#gh)"/>
+        <rect x="-9" y="10" width="18" height="100" rx="3" fill="url(#gm)" stroke="url(#gh)" stroke-width="1.5"/>
+        <ellipse cx="0" cy="112" rx="14" ry="7" fill="url(#gm)"/>
+      </g>
+      <!-- Infinity wrapping hammer -->
+      <g transform="translate(250, 140)" filter="url(#gl)">
+        <path d="M-100,0 C-100,-55 -45,-55 0,-22 C45,-55 100,-55 100,0 C100,55 45,55 0,22 C-45,55 -100,55 -100,0 Z" fill="none" stroke="url(#gm)" stroke-width="3.5" opacity="0.8"/>
+        <path d="M-95,0 C-95,-50 -42,-50 0,-19 C42,-50 95,-50 95,0 C95,50 42,50 0,19 C-42,50 -95,50 -95,0 Z" fill="none" stroke="url(#gh)" stroke-width="1.2" opacity="0.35"/>
+      </g>
+      <!-- Eye of Odin -->
+      <g transform="translate(250, 140)">
+        <path d="M-24,0 Q0,-20 24,0 Q0,20 -24,0 Z" fill="url(#gm)" stroke="url(#gh)" stroke-width="1.5"/>
+        <circle cx="0" cy="0" r="9" fill="#8B6914"/>
+        <circle cx="0" cy="0" r="4.5" fill="#0A0A0A"/>
+        <circle cx="-2" cy="-2" r="2" fill="#FFF8DC" opacity="0.7"/>
+      </g>
+    </svg>
+  </div>
+  <h1 class="fade-up delay-1">Sindri Draupnir</h1>
+  <p class="tagline fade-up delay-2">Where value is forged.</p>
+  <p class="subtitle fade-up delay-3">Operations &mdash; Zug, Switzerland</p>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-label">About</div>
+    <div class="about-content">
+      <div>
+        <h2>The operating forge</h2>
+        <div class="divider"></div>
+        <p>Sindri Draupnir GmbH is the primary operating entity of the Draupnir Global group. We execute across precious metals, strategic advisory, and international trade &mdash; with the precision of Swiss governance and the reach of a global network.</p>
+      </div>
+      <div>
+        <p>Named after Sindri, the Norse dwarf-smith who forged both Draupnir and Mjolnir, our company embodies the art of transforming raw opportunity into lasting value.</p>
+        <p>Headquartered in Zug with operational reach into Latin America, Africa, and the Middle East, we bridge emerging market opportunity with first-world compliance and banking infrastructure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-label">Services</div>
+    <h2>What we do</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Precious Metals</h3>
+        <div class="card-type">Gold &middot; Brokerage</div>
+        <p>International gold brokerage connecting source markets with LBMA-accredited Swiss refineries. From dor&eacute; to delivery.</p>
+      </div>
+      <div class="service-card">
+        <h3>Strategic Advisory</h3>
+        <div class="card-type">Defence &middot; Consulting</div>
+        <p>Strategic consulting for governments and institutions. Security sector reform, procurement advisory, and infrastructure development.</p>
+      </div>
+      <div class="service-card">
+        <h3>International Trade</h3>
+        <div class="card-type">Technology &middot; Commodities</div>
+        <p>Cross-border trade facilitation in technology, dual-use goods, and commodity supply chains. Fully compliant with SECO and international sanctions frameworks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-label">Contact</div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Sindri Draupnir GmbH</h3>
+        <p>Zug, Switzerland</p>
+        <p style="margin-top: 20px;"><a href="mailto:info@sindridraupnir.com">info@sindridraupnir.com</a></p>
+      </div>
+      <div class="contact-info">
+        <h3>Part of</h3>
+        <p><a href="https://draupnirglobal.com">Draupnir Global GmbH</a></p>
+        <p>Zug, Switzerland</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Sindri Draupnir GmbH &mdash; A Draupnir Global company</p>
+    <p>ZUG, SWITZERLAND</p>
+  </div>
+</footer>
+
+</body>
+</html>
