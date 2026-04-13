@@ -73,7 +73,8 @@
     gap: 14px;
     text-decoration: none;
   }
-  .nav-logo svg { width: 36px; height: 18px; }
+  .nav-logo svg { width: 36px; height: 18px; display: none; }
+  .nav-logo img { height: 36px; width: auto; }
   .nav-logo span {
     color: var(--gold);
     font-size: 14px;
@@ -119,7 +120,8 @@
     opacity: 0.3;
   }
   .hero-logo { margin-bottom: 48px; opacity: 0.85; }
-  .hero-logo svg { width: 280px; height: 140px; }
+  .hero-logo svg { width: 280px; height: 140px; display: none; }
+  .hero-logo img { width: 320px; height: auto; }
   .hero h1 {
     font-size: 48px;
     font-weight: 400;
@@ -288,7 +290,7 @@
     .container { padding: 0 24px; }
     .hero h1 { font-size: 28px; letter-spacing: 6px; }
     .hero .tagline { font-size: 15px; }
-    .hero-logo svg { width: 200px; height: 100px; }
+    .hero-logo img { width: 220px; }
     .about-content,
     .companies-grid,
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -325,15 +327,7 @@
 <nav>
   <div class="container">
     <a href="#" class="nav-logo">
-      <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="nav-glow"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <path d="M 200 100 C 200 60, 260 40, 300 40 C 340 40, 380 65, 380 100 C 380 135, 340 160, 300 160 C 260 160, 200 140, 200 100 C 200 60, 140 40, 100 40 C 60 40, 20 65, 20 100 C 20 135, 60 160, 100 160 C 140 160, 200 140, 200 100 Z" fill="none" stroke="#C5A55A" stroke-width="3" filter="url(#nav-glow)"/>
-        <path d="M 170 100 Q 185 78, 200 78 Q 215 78, 230 100 Q 215 122, 200 122 Q 185 122, 170 100 Z" fill="none" stroke="#C5A55A" stroke-width="2"/>
-        <circle cx="200" cy="100" r="11" fill="none" stroke="#C5A55A" stroke-width="1.5"/>
-        <circle cx="200" cy="100" r="5" fill="#C5A55A"/>
-      </svg>
+      <img src="logo-hero.png" alt="Draupnir Global">
       <span>DRAUPNIR GLOBAL</span>
     </a>
     <ul class="nav-links">
@@ -348,22 +342,7 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-logo fade-up">
-    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <filter id="glow-s"><feGaussianBlur stdDeviation="1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <path d="M 200 100 C 200 60, 260 40, 300 40 C 340 40, 380 65, 380 100 C 380 135, 340 160, 300 160 C 260 160, 200 140, 200 100 C 200 60, 140 40, 100 40 C 60 40, 20 65, 20 100 C 20 135, 60 160, 100 160 C 140 160, 200 140, 200 100 Z" fill="none" stroke="#C5A55A" stroke-width="2.5" filter="url(#glow)"/>
-      <path d="M 170 100 Q 185 78, 200 78 Q 215 78, 230 100 Q 215 122, 200 122 Q 185 122, 170 100 Z" fill="none" stroke="#C5A55A" stroke-width="1.8" filter="url(#glow-s)"/>
-      <circle cx="200" cy="100" r="11" fill="none" stroke="#C5A55A" stroke-width="1.5" filter="url(#glow-s)"/>
-      <circle cx="200" cy="100" r="5" fill="#C5A55A" filter="url(#glow-s)"/>
-      <circle cx="200" cy="100" r="8" fill="none" stroke="#C5A55A" stroke-width="0.8" opacity="0.5"/>
-      <circle cx="202" cy="98" r="1.5" fill="#F5F0E8" opacity="0.6"/>
-      <line x1="200" y1="72" x2="200" y2="76" stroke="#C5A55A" stroke-width="1" opacity="0.4" filter="url(#glow-s)"/>
-      <line x1="200" y1="124" x2="200" y2="128" stroke="#C5A55A" stroke-width="1" opacity="0.4" filter="url(#glow-s)"/>
-      <polygon points="20,100 24,96 28,100 24,104" fill="#C5A55A" opacity="0.3"/>
-      <polygon points="372,100 376,96 380,100 376,104" fill="#C5A55A" opacity="0.3"/>
-    </svg>
+    <img src="logo-hero.png" alt="Draupnir Global — Forged in Wisdom">
   </div>
   <h1 class="fade-up delay-1">Draupnir Global</h1>
   <p class="tagline fade-up delay-2">Forged in wisdom. Multiplied by design.</p>
